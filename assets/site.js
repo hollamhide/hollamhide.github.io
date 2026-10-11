@@ -49,7 +49,7 @@ function makeGameRandom(seed) {
 }
 
 function generateDomineeringPosition(rng = Math.random, size = 7) {
-  const ranges = {5:[0,1],7:[1,3],9:[2,4]};
+  const ranges = {5:[0,1],7:[1,3],9:[2,4],11:[3,6]};
   if (!ranges[size]) size = 7;
   const [minimum,maximum] = ranges[size];
   const count = minimum + Math.floor(rng() * (maximum - minimum + 1));
@@ -515,7 +515,7 @@ function initializeDomineering(widget) {
   }
   sizeButtons.forEach(button=>button.addEventListener('click',()=>{
     const size=Number(button.dataset.gameSize);
-    if([5,7,9].includes(size)){selectedSize=size;updateSizeChoice();leaderboard?.setSize(size);}
+    if([5,7,9,11].includes(size)){selectedSize=size;updateSizeChoice();leaderboard?.setSize(size);}
   }));
   if(start)start.addEventListener('click',startSelectedGame);
   reset.addEventListener('click',()=>{

@@ -38,7 +38,8 @@ elements in research/index.html. Selected papers also appear on index.html.
 The content is present without JavaScript, so search engines can read it.
 The optional JavaScript adds paper search, category filters, and an interactive
 single-player shape-placement game at the bottom of the Teaching page.
-Choose a 5-by-5, 7-by-7, or 9-by-9 board before starting; 7-by-7 is the default.
+Choose a 5-by-5, 7-by-7, 9-by-9, or 11-by-11 board before starting;
+7-by-7 is the default.
 Every piece covers four squares. All connected four-square shapes are
 possible, including their distinct rotations and reflections.
 Place the current piece without rotating it. The next three pieces are visible
@@ -54,7 +55,8 @@ Hover any square that a legal placement could cover; clicking places the
 exact preview. Focus and Enter provide the same choices with the keyboard.
 A fresh seed fixes random blocked squares, with no symmetry requirement,
 and the full sequence of pieces and orientations. Blocked-square ranges
-scale with the board: 0–1 on 5-by-5, 1–3 on 7-by-7, and 2–4 on 9-by-9.
+scale with the board: 0–1 on 5-by-5, 1–3 on 7-by-7, 2–4 on 9-by-9,
+and 3–6 on 11-by-11.
 Boards mix scattered blockers with small clusters and exclude stranded
 regions smaller than a piece. Each puzzle is generated with a packing that
 reaches the free-area bound, then its pieces are shuffled into arrival order.
@@ -70,7 +72,7 @@ Puzzle preparation runs
 separately from the page in assets/packing-worker.js and packing-solver.js.
 
 LEADERBOARDS
-A shared top ten is kept separately for 5-by-5, 7-by-7 and 9-by-9 boards.
+A shared top ten is kept separately for 5-by-5, 7-by-7, 9-by-9 and 11-by-11 boards.
 Scores are ranked by exact covered/optimal percentage, with newer submissions
 first in a tie. Adding a qualifying score is optional: visitors can enter a
 name or everyday noun, optionally followed by up to five digits, or leave the
@@ -83,7 +85,7 @@ every real name. Dictionary attribution is in assets/player-names-LICENSE.txt.
 The service regenerates the signed starting seed and replays all legal moves
 before accepting a score. Submitted percentages are never trusted. This
 checks a legal replay; it does not claim to distinguish humans from bots.
-The database keeps at most 30 scores and no discarded score history. Anonymous
+The database keeps at most 40 scores and no discarded score history. Anonymous
 one-use submission receipts (no name or score) expire after 24 hours. One
 score may be added per starting ticket; Reset preserves an already-added score.
 The static game remains playable if the score service is unavailable, with

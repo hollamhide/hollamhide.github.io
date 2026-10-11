@@ -2,7 +2,7 @@
   'use strict';
 
   const controllers = new WeakMap();
-  const supportedSizes = [5, 7, 9];
+  const supportedSizes = [5, 7, 9, 11];
 
   function qualifiesForLeaderboard(result, entries) {
     if (entries.length < 10) return true;

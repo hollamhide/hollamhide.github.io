@@ -182,8 +182,8 @@
   function generate(seed, options={}) {
     seed=Number(seed)>>>0;
     const size=options.size===undefined?7:options.size;
-    const blockRanges={5:[0,1],7:[1,3],9:[2,4]};
-    if(!Object.prototype.hasOwnProperty.call(blockRanges,size)||!Number.isInteger(size))throw new Error('Choose a board size of 5, 7 or 9.');
+    const blockRanges={5:[0,1],7:[1,3],9:[2,4],11:[3,6]};
+    if(!Object.prototype.hasOwnProperty.call(blockRanges,size)||!Number.isInteger(size))throw new Error('Choose a board size of 5, 7, 9 or 11.');
     const [minimumBlocks,maximumBlocks]=blockRanges[size];
     const started=Date.now(),rng=seededRandom(seed),total=size*size,area=variants[0].cells.length;
     const neighbors=Array.from({length:total},(_,cell)=>{
